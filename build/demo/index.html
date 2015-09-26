@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>modal-overlay demo</title>
+    <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="../../../polymer/polymer.html">
+    <link rel="import" href="../modal-overlay.html">
+    <style>
+      //- .fixed {
+      //-   position: fixed;
+      //-   left: 0;
+      //-   top: 0;
+      //- }
+    </style>
+  </head>
+  <body>
+    <demo-element></demo-element>
+    <dom-module id="demo-element">
+      <style>
+        :host {
+          box-sizing: border-box;
+          display: block;
+          position: fixed;
+        }
+        
+        #index {
+          color: white;
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+        }
+        
+        #open {
+          border-radius: 100%;
+          width: 50px;
+          height: 50px;
+          background-color: green;
+        
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        
+          cursor: crosshair;
+        }
+        
+        modal-overlay {
+          background-color: rgba(100, 100, 100, 0.5);
+        }
+        
+      </style>
+      <template>
+        <div id="open" on-down="_open"><span id="index">{{index}}</span></div>
+      </template>
+    </dom-module>
+    <script src="modal-overlay-demo.js"></script>
+  </body>
+</html>

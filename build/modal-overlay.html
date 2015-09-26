@@ -1,0 +1,20 @@
+
+<link rel="import" href="../../polymer/polymer.html"/>
+<dom-module id="modal-overlay">
+  <style>
+    :host {
+      box-sizing: border-box;
+      left: 0;
+      top: 0;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+    }
+    
+  </style>
+  <template>
+    <div id="overlay" hidden$="{{!active}}"></div>
+    <content></content>
+  </template>
+</dom-module>
+<script src="modal-overlay.js"></script>
